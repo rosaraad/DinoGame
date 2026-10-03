@@ -1,9 +1,9 @@
+import random
 import pygame
 import sys
 
 WIDTH = 900
 HIGHT = 600
-FRAME = 0
 
 class Game:
     def __init__(self):
@@ -13,6 +13,8 @@ class Game:
 
         self.track = pygame.image.load("Assets/Other/Track.png")
         self.track = pygame.transform.scale(self.track,(WIDTH,20))
+        self.track_x1 = 0
+        self.track_x2 = WIDTH
 
         self.cloud = pygame.image.load("Assets/Other/Cloud.png")
         self.cloud = pygame.transform.scale(self.cloud,(WIDTH,20))
@@ -41,9 +43,17 @@ class Game:
             "Bird2" : pygame.transform.scale(pygame.image.load("Assets/Bird/Bird2.png"),(70,70)),
         }
 
+        self.dino_x = 40
+        self.dino_y = 450
+        self.bird_x = 1100
+        self.bird_y = 40
+
         self.font_small = pygame.font.Font("Assets/Font/Pixeltype.ttf",40)
 
         self.state = "menu"
+        self.frame = 0
+        self.jump = False
+        self.point = 0
         self.clock = pygame.time.Clock()
 
     def run(self):
@@ -70,7 +80,7 @@ class Game:
                     if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                         if self.rect_play.collidepoint(event.pos):
                             self.state = "play"
-                            FRAME = 0
+                            self.frame = 0
                         elif self.rect_quit.collidepoint(event.pos):
                             pygame.quit()
                             sys.exit()                      
@@ -79,10 +89,29 @@ class Game:
 
             while self.state=="play":
                 self.screen.fill("#ffffff")
-                self.screen.blit(self.track,(0,500))
 
-                self.dino = self.dino_images["DinoRun1"] if (FRAME//10)%2==0 else self.dino_images["DinoRun2"]
-                self.screen.blit(self.dino,(40,450))
+                self.track_x1 -= 4
+                self.track_x2 -= 4
+
+                if self.track_x1 <= -WIDTH:
+                    self.track_x1 = self.track_x2 + WIDTH
+
+                if self.track_x2 <= -WIDTH:
+                    self.track_x2 = self.track_x1 + WIDTH
+
+                self.screen.blit(self.track,(self.track_x1,500))
+                self.screen.blit(self.track,(self.track_x2,500))
+
+                self.dino = self.dino_images["DinoRun1"] if (self.frame//10)%2==0 else self.dino_images["DinoRun2"]
+                self.screen.blit(self.dino,(self.dino_x,self.dino_y))
+
+                self.bird = self.bird_images["Bird1"] if (self.frame//10)%2==0 else self.bird_images["Bird2"]
+                self.screen.blit(self.bird,(self.bird_x,self.bird_y))
+
+                if self.point>10 and self.bird_x > -10:
+                    self.bird_x -= 4
+                else:
+                    self.bird_x = 1100
 
                 for event in pygame.event.get():
                     if event.type==pygame.QUIT:
@@ -91,6 +120,6 @@ class Game:
 
                 self.clock.tick(80)
                 pygame.display.update()  
-                FRAME += 1     
+                self.frame += 1     
                 
 Game().run()
