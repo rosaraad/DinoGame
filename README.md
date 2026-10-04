@@ -9,7 +9,7 @@ A simple **Dinosaur Game** built from scratch using **Python** and **Pygame**.
 ## 🎮 Features
 
 * Main menu with Play and Quit options
-* Dino running and jumping animations
+* Dino running, jumping, and ducking animations
 * Jump sound effects and background music
 * Moving ground
 * Cactus obstacles
@@ -46,9 +46,10 @@ python main.py
 
 ## 🎮 Controls
 
-| Key     | Action |
-| ------- | ------ |
-| `Space` | Jump   |
+| Key          | Action |
+| ------------ | ------ |
+| `Space`      | Jump   |
+| `↓` Key Down | Duck   |
 
 ## 📁 Project Structure
 
