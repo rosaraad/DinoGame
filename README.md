@@ -84,11 +84,13 @@ DinoGame/
 ├── demo.gif
 └── README.md
 ```
+## 🛠️ Built With
 
-## 📌 Note
+-Python
+-Pygame 
 
-This project was created from scratch as a Python and Pygame practice project.
+## 👩‍💻 Author
 
----
+**Rosa Raad**
 
-Made with Python 🐍 and Pygame 🎮
+[GitHub](https://github.com/rosaraad)
