@@ -16,6 +16,7 @@ A simple Dinosaur Game built from scratch using Python and Pygame.
     <td><img src="./Assets/Demo/over.png" width="250"></td>
   </tr>
 </table>
+
 ## 🎥 Demo
 
 <p align="center">
@@ -76,12 +77,14 @@ DinoGame/
 │   ├── audio/
 │   ├── Bird/
 │   ├── Cactus/
+│   ├── Demo/
 │   ├── Dino/
 │   ├── Font/
 │   └── Other/
 │
 ├── main.py
-├── demo.gif
+├── points.txt
+├── .gitignore
 └── README.md
 ```
 ## 🛠️ Built With
