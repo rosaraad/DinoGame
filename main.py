@@ -95,7 +95,7 @@ class Game:
     def run(self):
         while True:
             #-------------------------Menu-------------------------
-            while self.state=="menu":
+            if self.state=="menu":
                 self.screen.fill("#ffffff")
 
                 # Create the Play and Quit buttons
@@ -146,7 +146,7 @@ class Game:
                 self.clock.tick(60)
 
             #-------------------------Play-------------------------
-            while self.state=="play":
+            elif self.state=="play":
                 self.screen.fill("#ffffff")
 
                 # Choose the dino animation
@@ -279,7 +279,7 @@ class Game:
                 self.frame += 1     
 
             #-------------------------Game-Over-------------------------
-            while self.state=="over":
+            elif self.state=="over":
 
                 self.screen.fill("#ffffff")
 
