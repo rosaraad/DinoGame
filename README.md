@@ -5,15 +5,15 @@ A simple Dinosaur Game built from scratch using Python and Pygame.
 ## 📸 Preview
 
 <p align="center">
-  <img src="./assets/Demo/menu.png" width="30%" />
-  <img src="./assets/Demo/play.png" width="30%" />
-  <img src="./assets/Demo/over.png" width="30%" />
+  <img src="./Assets/Demo/menu.png" width="30%" />
+  <img src="./Assets/Demo/play.png" width="30%" />
+  <img src="./Assets/Demo/over.png" width="30%" />
 </p>
 
 ## 🎥 Demo
 
 <p align="center">
-  <img src="./assets/Demo/demo.gif" width="80%" />
+  <img src="./Assets/Demo/demo.gif" width="80%" />
 </p>
 
 ## 🎮 Features
