@@ -86,8 +86,8 @@ DinoGame/
 ```
 ## 🛠️ Built With
 
--Python
--Pygame 
+- Python
+- Pygame
 
 ## 👩‍💻 Author
 
