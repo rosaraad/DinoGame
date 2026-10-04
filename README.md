@@ -1,10 +1,14 @@
-# DinoGame 🦖
+# 🦖 DinoGame 
 
-A simple **Dinosaur Game** built from scratch using **Python** and **Pygame**.
+A simple Dinosaur Game built from scratch using Python and Pygame.
 
-## 🎬 Demo
+## 📸 Preview
 
-![DinoGame Demo](demo.gif)
+![Desktop Preview](./assets/preview.png)
+
+## 🎥 Demo
+
+![Website Demo](./assets/demo.gif)
 
 ## 🎮 Features
 
